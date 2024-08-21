@@ -48,18 +48,36 @@ This project is a social media app built using the MERN stack (MongoDB, Express.
 
 ### Setup
 
- **Clone the repository:**
+# Clone the repository
+git clone https://github.com/Prem-06/Instagram.git
+cd SnapVibe
 
-   ```bash
-   git clone https://github.com/Prem-06/Instagram.git
-   cd  SnapVibe
-   cd backend
-   npm install
-   cd ../frontend
-   npm install
-   MONGO_URI=your_mongodb_connection_string
-   JWT_SECRET=your_jwt_secret
-```
+# Setup backend
+cd backend
+npm install
+
+# Create .env file for backend
+echo "MONGO_URI=your_mongodb_connection_string" > .env
+echo "JWT_SECRET=your_jwt_secret" >> .env
+
+# Setup frontend
+cd ../frontend
+npm install
+
+# Create .env file for frontend
+echo "VITE_BACKEND_URL=http://localhost:3000" > .env
+
+# Start backend and frontend servers
+# Open two terminal windows and run the following commands in each:
+
+# In the first terminal (backend):
+# cd SnapVibe/backend
+# npm start
+
+# In the second terminal (frontend):
+# cd SnapVibe/frontend
+# npm run dev
+
 
 ## Project Structure
 

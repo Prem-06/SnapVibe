@@ -46,38 +46,54 @@ This project is a social media app built using the MERN stack (MongoDB, Express.
 - Node.js
 - MongoDB
 
-### Setup
 
-# Clone the repository
+## Setup Instructions
+
+### Clone the Repository
+
+```bash
 git clone https://github.com/Prem-06/Instagram.git
 cd SnapVibe
+```
 
-# Setup backend
+### Setup Backend
+```bash
 cd backend
 npm install
+```
+Create a .env file in the backend directory and add the following environment variables:
+```bash
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+```
 
-# Create .env file for backend
-echo "MONGO_URI=your_mongodb_connection_string" > .env
-echo "JWT_SECRET=your_jwt_secret" >> .env
-
-# Setup frontend
+### Setup Frontend
+```bash
 cd ../frontend
 npm install
+```
+Create a .env file in the frontend directory and add the following environment variable:
+```bash
+VITE_BACKEND_URL=http://localhost:3000
+```
 
-# Create .env file for frontend
-echo "VITE_BACKEND_URL=http://localhost:3000" > .env
+### Start Server
+Open two terminal windows and run the following commands:
 
-# Start backend and frontend servers
-# Open two terminal windows and run the following commands in each:
+In the first terminal (backend):
 
-# In the first terminal (backend):
-# cd SnapVibe/backend
-# npm start
+```bash
+cd backend
+node app.js
+```
 
-# In the second terminal (frontend):
-# cd SnapVibe/frontend
-# npm run dev
+In the second terminal (frontend):
 
+```bash
+cd frontend
+npm start
+```
+Your backend server will be running on http://localhost:3000, and the frontend will be accessible at http://localhost:5173 
 
 ## Project Structure
 

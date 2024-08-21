@@ -1,4 +1,4 @@
-# Instagram Clone
+# SnapVibe(Social Media App)
 
 ## Table of Contents
 
@@ -8,14 +8,12 @@
 - [Installation](#installation)
 - [Environment Variables](#environment-variables)
 - [Usage](#usage)
-- [API Documentation](#api-documentation)
 - [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
+  
 
 ## Introduction
 
-This project is an Instagram clone built using the MERN stack (MongoDB, Express.js, React.js, Node.js). It allows users to sign up, log in, upload posts, like posts, comment on posts, follow/unfollow users, and view a feed of posts from users they follow.
+This project is a social media app built using the MERN stack (MongoDB, Express.js, React.js, Node.js). It allows users to sign up, log in, upload posts, like posts, comment on posts, follow/unfollow users, and view a feed of posts from users they follow.
 
 ## Features
 
@@ -31,13 +29,12 @@ This project is an Instagram clone built using the MERN stack (MongoDB, Express.
 
 - **Frontend:**
   - React.js
-  - Redux (for state management)
   - CSS (for styling)
 
 - **Backend:**
   - Node.js
   - Express.js
-  - MongoDB (Mongoose for ORM)
+  - MongoDB 
 
 - **Authentication:**
   - JWT (JSON Web Tokens)
@@ -48,34 +45,42 @@ This project is an Instagram clone built using the MERN stack (MongoDB, Express.
 
 - Node.js
 - MongoDB
-- npm or yarn
 
 ### Setup
 
-1. **Clone the repository:**
+ **Clone the repository:**
 
    ```bash
    git clone https://github.com/yourusername/instagram-clone.git
-   cd instagram-clone
-cd backend
-npm install
-cd ../frontend
-npm install
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-
-instagram-clone/
-├── backend/            # Backend source code
-│   ├── controllers/    # Route controllers
-│   ├── models/         # Mongoose models
-│   ├── routes/         # Express routes
-│   ├── middleware/     # Middleware functions
-│   └── server.js       # Entry point of the backend
-├── frontend/           # Frontend source code
-│   ├── public/         # Public assets
-│   ├── src/            # React components, Redux store, etc.
-│   └── App.js          # Entry point of the frontend
-└── README.md           # This README file
+   cd  SnapVibe
+   cd backend
+   npm install
+   cd ../frontend
+   npm install
+   MONGO_URI=your_mongodb_connection_string
+   JWT_SECRET=your_jwt_secret
+```
+SnapVibe/
+├── frontend/                # Frontend project files
+│   ├── public/              # Public assets (index.html, favicon, etc.)
+│   ├── src/                 # Source files (React components, styles, etc.)
+│   │   ├── components/      # React components
+│   │   ├── pages/           # Page components
+│   │   ├── styles/          # CSS or styled-components
+│   │   ├── App.js           # Main App component
+│   │   └── index.js         # Entry point for React
+│   ├── package.json         # Frontend dependencies and scripts
+│   └── .env                 # Environment variables for frontend
+├── backend/                 # Backend project files
+│   ├── controllers/         # Request handlers
+│   ├── models/              # Database models
+│   ├── routes/              # API routes
+│   ├── middleware/          # Middleware (authentication, etc.)
+│   ├── config/              # Configuration files (database, server settings, etc.)
+│   ├── app.js               # Main app entry point
+│   ├── package.json         # Backend dependencies and scripts
+│   └── .env                 # Environment variables for backend
+└── README.md                # Project overview and setup instructions
 
 
 Just copy and paste the code above into your `README.md` file, and you're all set!
